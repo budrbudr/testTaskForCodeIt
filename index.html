@@ -18,7 +18,7 @@
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-user"></i></div>
                 </div>
-                <input type="text" class="form-control" id="inputUserName" placeholder="Name">
+                <input type="text" class="form-control" id="inputUserName" placeholder="Name" required>
             </div>
         </div>
         <div class="form-group">
@@ -27,7 +27,7 @@
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-user"></i></div>
                 </div>
-                <input type="text" class="form-control" id="inputSecondName" placeholder="Secondname">
+                <input type="text" class="form-control" id="inputSecondName" placeholder="Secondname" required>
             </div>
         </div>
         <div class="form-group">
@@ -36,8 +36,9 @@
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="far fa-envelope"></i></div>
                 </div>
-                <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                <input type="text" class="form-control" id="inputEmail" placeholder="Email" onkeyup='checkEmail();' required>
             </div>
+            <small id="emailRegex" class="form-text text-muted"></small>
         </div>
         <div class="form-group ">
             <select class="form-control" id="inputGender">
@@ -51,11 +52,12 @@
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-star-of-life"></i></div>
                 </div>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" onkeyup='checkPass();' required>
             </div>
+            <small id="passwordRegex" class="form-text text-muted"></small>
         </div>
         <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="checkbox">
+            <input type="checkbox" class="form-check-input" id="checkbox" required>
             <label class="form-check-label" for="checkbox">Condition of Agreement</label>
         </div>
       <div class="button text-right">
