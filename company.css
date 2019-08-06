@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: center;
     width: 450px;
-    height: 350px;
+    height: 330px;
 }
 div.card {
     padding-right: 0;
@@ -12,11 +12,14 @@ div.card {
 }
 .card {
     margin: 15px;
+    max-height: 330px;
 }
 .cardHeader {
     text-align: center;
     background: lightgray;
     height: 30px;
+    padding-bottom: 10px;
+
 }
 #circle {
     width: 10em;
@@ -26,4 +29,14 @@ div.card {
     margin: auto;
     line-height: 9em;
     text-align: center;
+}
+.nameCompany {
+    overflow-y: auto;
+    width: 100%;
+}
+#nameCompanies table {
+    width: 100%;
+}
+td {
+    border: 1px solid black;
 }
