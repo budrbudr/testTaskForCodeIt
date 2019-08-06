@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 450px;
+    height: 350px;
+}
+div.card {
+    padding-right: 0;
+    padding-left: 0;
+}
+.card {
+    margin: 15px;
+}
+.cardHeader {
+    text-align: center;
+    background: lightgray;
+    height: 30px;
+}
+#circle {
+    width: 10em;
+    height: 10em;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: auto;
+    line-height: 9em;
+    text-align: center;
+}

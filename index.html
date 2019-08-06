@@ -11,14 +11,14 @@
 <body>
 <div class="container col-4">
         <legend>Sign up</legend>
-    <form>
+    <form id="registration" action="http://codeit.ai/codeitCandidates/serverFrontendTest/user/registration" method="post">
         <div class="form-group pt-3">
             <label class="sr-only" for="inputUserName"></label>
             <div class="input-group">
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-user"></i></div>
                 </div>
-                <input type="text" class="form-control" id="inputUserName" placeholder="Name" required>
+                <input type="text" class="form-control" id="inputUserName" placeholder="Name" name="name" required>
             </div>
         </div>
         <div class="form-group">
@@ -27,8 +27,9 @@
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-user"></i></div>
                 </div>
-                <input type="text" class="form-control" id="inputSecondName" placeholder="Secondname" required>
+                <input type="text" class="form-control" id="inputSecondName" placeholder="Secondname" name="secondname" onkeyup='checkSecondName();' required>
             </div>
+            <small id="secondNameRegex" class="form-text text-muted"></small>
         </div>
         <div class="form-group">
             <label class="sr-only" for="inputEmail"></label>
@@ -36,14 +37,14 @@
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="far fa-envelope"></i></div>
                 </div>
-                <input type="text" class="form-control" id="inputEmail" placeholder="Email" onkeyup='checkEmail();' required>
+                <input type="text" class="form-control" id="inputEmail" placeholder="Email" name="email" onkeyup='checkEmail();' required>
             </div>
             <small id="emailRegex" class="form-text text-muted"></small>
         </div>
         <div class="form-group ">
-            <select class="form-control" id="inputGender">
-                <option>Male</option>
-                <option>Female</option>
+            <select class="form-control" id="inputGender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
             </select>
         </div>
         <div class="form-group">
@@ -52,23 +53,23 @@
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-star-of-life"></i></div>
                 </div>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password" onkeyup='checkPass();' required>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass" onkeyup='checkPass();' required>
             </div>
             <small id="passwordRegex" class="form-text text-muted"></small>
         </div>
         <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="checkbox" required>
+            <input type="checkbox" class="form-check-input" id="checkbox" name="checkbox" required>
             <label class="form-check-label" for="checkbox">Condition of Agreement</label>
         </div>
       <div class="button text-right">
-        <button id="sendButton" type="submit" class="btn btn-lg">Send</button>
+          <input id="sendButton" type="submit" class="btn btn-lg" value="Send"/>
       </div>
     </form>
 </div>
 
 
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/7bc8fbe033.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -79,6 +80,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<script src="ajax.js"></script>
 <script src="js.js"></script>
 </body>
 </html>
